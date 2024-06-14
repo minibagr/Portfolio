@@ -1,4 +1,5 @@
 * {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -16,8 +17,8 @@
     --hover-color: #d6d6d6;
     --hero-text: #64748b;
     --text-color: #000;
-
-    font-family: '';
+    --selection-background: #000;
+    --selection-text: #fff;
 
     /* FONTS VARS */
     --navigation-font: 'JetBrains Mono', 'Arial';
@@ -36,9 +37,18 @@
 }
 
 body {
-    scroll-behavior: smooth;
     width: 100%;
     overflow-x: hidden;
+}
+
+::-moz-selection {
+    color: var(--selection-text);
+    background: var(--selection-background);
+}
+
+::selection {
+    color: var(--selection-text);
+    background: var(--selection-background);
 }
 
 /* NAVIGACE */
@@ -169,4 +179,24 @@ body {
     100% {
         opacity: 100%;
     }
+}
+
+/* MAIN */
+#informace {
+    width: 33%;
+    margin: 70px auto 0 auto;
+}
+
+.heading {
+    font-size: var(--heading-font-size);
+    margin-bottom: 16px;
+}
+
+.text-font {
+    font-family: var(--text-font);
+}
+
+.text {
+    font-size: var(--default-font-size);
+    line-height: 1.75em;
 }
