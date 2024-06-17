@@ -250,7 +250,10 @@ body {
 }
 
 .dovednost-img {
-    width: 100px;
+    width: 150px;
+    aspect-ratio: 16/9;
+    object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 /* Projekty */
