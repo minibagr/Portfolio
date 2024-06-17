@@ -13,8 +13,8 @@
 
 :root {
     /* COLORS VARS */
-    --default-color: #eeeeee;
-    --hover-color: #d6d6d6;
+    --default-color: #f1f5f9;
+    --hover-color: #e2e8f0b3;
     --hero-text: #64748b;
     --text-color: #000;
     --selection-background: #000;
@@ -33,7 +33,7 @@
 
     /* BORDER VARS */
     --navigation-link-border: 2px solid black;
-    --navigation-bottom-border: 1px solid black;
+    --content-border: 1px solid #cbd5e1;
 }
 
 body {
@@ -57,16 +57,6 @@ body {
     height: 6vh;
     width: 100%;
     margin: 30px 0;
-}
-
-#navigation::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    border-bottom: var(--navigation-bottom-border);
 }
 
 #navigation-div {
@@ -143,23 +133,21 @@ body {
     color: var(--text-color);
     position: absolute;
     font-size: var(--hero-text-font-size);
+    animation: arrow-opacity-animation 5s infinite linear;
 }
 
 #arrow1 {
     opacity: 100%;
     bottom: 15px;
-    animation: arrow-opacity-animation 5s infinite linear;
 }
 
 #arrow2 {
     bottom: 25px;
-    animation: arrow-opacity-animation 5s infinite linear;
     animation-delay: 300ms;
 }
 
 #arrow3 {
     bottom: 35px;
-    animation: arrow-opacity-animation 5s infinite linear;
     animation-delay: 600ms;
 }
 
@@ -182,11 +170,7 @@ body {
 }
 
 /* MAIN */
-#informace {
-    width: 33%;
-    margin: 70px auto 0 auto;
-}
-
+/* OBECNE */
 .heading {
     font-size: var(--heading-font-size);
     margin-bottom: 16px;
@@ -199,4 +183,52 @@ body {
 .text {
     font-size: var(--default-font-size);
     line-height: 1.75em;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.center {
+    width: 33%;
+    margin: auto;
+}
+
+.bottom-border {
+    padding-bottom: 56px;
+    margin-bottom: 56px;
+    border-bottom: var(--content-border);
+}
+
+/* INFORMACE */
+#informace {
+    margin-top: 70px;
+}
+
+/* DOVEDNOSTI */
+#dovednosti-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    gap: 30px;
+}
+
+.dovednost {
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--default-color);
+    border-radius: 10px;
+    width: 1fr;
+}
+
+.dovednost:hover {
+    background-color: var(--hover-color);
+}
+
+.dovednost-img {
+    width: 100px;
 }
