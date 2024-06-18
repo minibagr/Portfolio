@@ -120,6 +120,12 @@ body {
 }
 
 /* HERO */
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 #hero-heading {
     font-family: var(--text-font);
     font-size: var(--hero-heading-font-size);
@@ -134,26 +140,10 @@ body {
     font-weight: 400;
 }
 
-.arrow {
-    color: var(--text-color);
-    position: absolute;
-    font-size: var(--hero-text-font-size);
-    animation: arrow-opacity-animation 5s infinite linear;
-}
-
-#arrow1 {
-    opacity: 100%;
-    bottom: 15px;
-}
-
-#arrow2 {
-    bottom: 25px;
-    animation-delay: 300ms;
-}
-
-#arrow3 {
-    bottom: 35px;
-    animation-delay: 600ms;
+#lines {
+    margin-bottom: 50px;
+    height: 70vh;
+    width: 100%;
 }
 
 @keyframes arrow-opacity-animation {
