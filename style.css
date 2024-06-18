@@ -228,6 +228,13 @@ body {
     align-items: center;
 }
 
+.posun {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* INFORMACE */
 #informace {
     margin-top: 3rem;
@@ -263,13 +270,6 @@ body {
 /* Projekty */
 #projekty {
     margin-bottom: 5rem;
-}
-
-#projekty-posun {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 #projekty-flex {
@@ -338,7 +338,11 @@ footer img {
 @media only screen and (max-width: 1150px) {
     /* PROJEKTY */
     .projekt {
-        flex-basis: 60%;
+        flex-basis: 80%;
+    }
+
+    #projekty-flex {
+        width: 130%;
     }
 }
 
@@ -362,8 +366,7 @@ footer img {
         grid-template-columns: repeat(2, 45%);
     }
 
-    /* PROJEKTY */
-    .projekt {
-        flex-basis: 55%;
+    #projekty-flex {
+        width: 100%;
     }
 }
