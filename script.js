@@ -51,8 +51,8 @@ function animate() {
 }
 animate()
 
-window.addEventListener('resize', () => {
+window.addEventListener('resize', function () {
     camera.aspect = lines.clientWidth / lines.clientHeight
     camera.updateProjectionMatrix()
-    renderer.setSize(lines.innerWidth, lines.innerHeight)
+    renderer.setSize(lines.clientWidth, lines.clientHeight)
 })
