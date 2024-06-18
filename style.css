@@ -36,7 +36,6 @@
     --screen-width: 36rem;
 
     /* BORDER VARS */
-    --navigation-link-border: 2px solid black;
     --content-border: 1px solid #cbd5e1;
 
     /* BOX SHADOW */
@@ -74,11 +73,10 @@ body {
 }
 
 #navigation-div {
-    width: 33%;
-    margin: auto;
+    padding-right: 20px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 #nav-image-div {
@@ -116,7 +114,7 @@ body {
 }
 
 .nav-link:hover {
-    border-bottom: var(--navigation-link-border);
+    text-decoration: underline;
 }
 
 /* HERO */
@@ -138,11 +136,26 @@ body {
     font-family: var(--text-font);
     font-size: var(--hero-text-font-size);
     font-weight: 400;
+    margin-bottom: 25px;
+}
+
+#hero-button {
+    background-color: var(--text-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: var(--navigation-font);
+    font-size: 0.75rem;
+}
+
+#hero-button:hover {
+    text-decoration: underline;
 }
 
 #lines {
     margin-bottom: 50px;
-    height: 75vh;
+    height: 80vh;
     width: 100%;
 }
 
@@ -217,7 +230,8 @@ body {
 
 /* INFORMACE */
 #informace {
-    margin-top: 70px;
+    margin-top: 3rem;
+    padding-top: 1rem;
 }
 
 /* DOVEDNOSTI */
@@ -310,6 +324,7 @@ footer img {
 }
 
 #footer-text {
+    padding: 10px;
     text-decoration: none;
     color: var(--text-color);
     font-size: var(--navigation-font-size);
@@ -317,5 +332,38 @@ footer img {
 }
 
 #footer-text:hover {
-    border-bottom: var(--navigation-link-border);
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1150px) {
+    /* PROJEKTY */
+    .projekt {
+        flex-basis: 60%;
+    }
+}
+
+@media only screen and (max-width: 610px) {
+    body {
+        text-align: center;
+    }
+
+    /* NAVIGACE */
+    #navigation-div {
+        padding: 0;
+        justify-content: center;
+    }
+
+    #lines {
+        height: 70vh;
+    }
+
+    /* DOVEDNOSTI */
+    #dovednosti-grid {
+        grid-template-columns: repeat(2, 45%);
+    }
+
+    /* PROJEKTY */
+    .projekt {
+        flex-basis: 55%;
+    }
 }
