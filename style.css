@@ -6,9 +6,11 @@
 }
 
 @font-face {
-    font-family: 'Saans TRIAL';
-    src: local('Saans TRIAL Regular'), local('Saans-TRIAL-Regular'),
-        url('font/Saans.woff2') format('woff2');
+    font-family: "Saans TRIAL";
+    src:
+        local("Saans TRIAL Regular"),
+        local("Saans-TRIAL-Regular"),
+        url("font/Saans.woff2") format("woff2");
 }
 
 :root {
@@ -21,8 +23,8 @@
     --selection-text: #fff;
 
     /* FONTS VARS */
-    --navigation-font: 'JetBrains Mono', 'Arial';
-    --text-font: 'Saans TRIAL', 'Arial';
+    --navigation-font: "JetBrains Mono", "Arial";
+    --text-font: "Saans TRIAL", "Arial";
 
     /* FONTS SIZE VARS */
     --default-font-size: 1.25rem;
@@ -182,7 +184,7 @@ body {
 .heading {
     font-size: var(--heading-font-size);
     margin-bottom: 30px;
-    font-variation-settings: 'wght' 600;
+    font-variation-settings: "wght" 600;
 }
 
 .text-font {
@@ -276,7 +278,7 @@ body {
     width: 170%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 5%;
 }
